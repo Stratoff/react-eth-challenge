@@ -21,8 +21,9 @@ const App = () => {
   // Gets the data from api on App mount
   useEffect(() => {
     getData("https://raw.githubusercontent.com/Stratoff/react-eth-challenge/main/data.json")
-      .then(rs => setMyData(rs));
+      .then(rs => setMyData(rs.data));
   }, [])
+
 
   return (
     <Context.Provider value={myData}>
